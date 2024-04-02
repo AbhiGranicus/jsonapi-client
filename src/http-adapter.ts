@@ -88,6 +88,7 @@ class HttpAdapter implements HttpAdapterInterface {
     const options: RequestOptions = {
       method,
       headers: this.headers,
+      credentials: 'same-origin', // Add credentials option here
     };
     if (data) {
       options.body = JSON.stringify(data);
